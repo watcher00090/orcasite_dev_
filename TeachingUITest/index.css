@@ -1,0 +1,12 @@
+
+
+
+
+#thumbNailStore {
+	background-color: white;
+	overflow: hidden;
+}
+
+.thumbnail {
+	position: relative;
+}
