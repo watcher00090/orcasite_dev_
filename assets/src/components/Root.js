@@ -9,6 +9,8 @@ import Home from "./Home"
 import Admin from "./admin/Dashboard"
 import DynamicFeed from "./DynamicFeed"
 import Login from "./Login"
+import NewHome from "./NewHome"
+import GQLExperiment from "./GQLExperiment"
 
 const Root = props => {
   return (
@@ -25,14 +27,19 @@ const Root = props => {
           path="/register"
           render={props => <Login {...props} login={false} />}
         />
+
+        <Route exact path="/newhome" component={NewHome} />  
+        <Route exact path="/experimentgql" component={GQLExperiment} />  
+
+
+        
         <Route path="/dynamic/:feedSlug" component={DynamicFeed} />
 
         <AdminRoute path="/admin" component={Admin} />
 
         <Route path="/:feedSlug" component={Home} />
       </Switch>
-    </BrowserRouter>
-  )
+    </BrowserRouter>  )
 }
 
 export default hot(Root)

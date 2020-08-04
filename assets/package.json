@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "npm run watch",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test" : "react-app-rewired test",
     "watch": "MIX_ENV=dev webpack-dev-server --mode development --inline --hot --stdin --colors --host 0.0.0.0 --public localhost:8080",
     "deploy": "MIX_ENV=prod webpack --mode production --env.prod"
   },
@@ -78,6 +80,7 @@
     "popper.js": "^1.15.0",
     "postcss": "^7.0.18",
     "postcss-loader": "^3.0.0",
+    "react-app-rewired": "^2.1.6",
     "react-hot-loader": "^4.12.13",
     "react-test-renderer": "^16.9.0",
     "sass-loader": "^8.0.0",

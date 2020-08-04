@@ -8,7 +8,7 @@ defmodule OrcasiteWeb.Endpoint do
                     else
                       false
                     end
-          
+
     ]
   )
 
