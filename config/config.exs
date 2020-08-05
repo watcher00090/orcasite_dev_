@@ -10,6 +10,10 @@ config :phoenix, :json_library, Jason
 # General application configuration
 config :orcasite,
   ecto_repos: [Orcasite.Repo]
+  
+config :orcasite, Orcasite.Repo,
+  database: "orcasite_repo",
+  hostname: "localhost"
 
 # Configures the endpoint
 config :orcasite, OrcasiteWeb.Endpoint,
