@@ -3,6 +3,10 @@ import { Link as RouterLink } from "react-router-dom"
 
 import FeedList from "./FeedList"
 
+import SimpleMap from "./SimpleMap.js"
+
+import About from "./About.js"
+
 import {
   Paper,
   AppBar,
@@ -18,6 +22,7 @@ import {
   Card,
   CardActionArea,
   CardMedia,
+  Grid,
 } from "@material-ui/core"
 import NotificationIcon from "@material-ui/icons/Notifications"
 
@@ -68,6 +73,14 @@ const useStyles = makeStyles(theme => ({
 const NewHomeSiteMenu = () => {
   const classes = useStyles()
   const [value, setValue] = useState("about")
+ 
+  /*
+  const location = {
+    address: '1600 Amphitheatre Parkway, Mountain View, california.',
+    lat: 37.42216,
+    lng: -122.08427,
+  } 
+  */
 
   const notificationDoc = `https://docs.google.com/forms/d/1oYSTa3QeAAG-G_eTxjabrXd264zVARId9tp2iBRWpFs/edit`
 
@@ -76,6 +89,7 @@ const NewHomeSiteMenu = () => {
   }
 
   return (
+    <>
     <Paper elevation={0} square>
       <AppBar position="static" color="inherit" className={classes.appBar}>
         <Toolbar>
@@ -110,10 +124,18 @@ const NewHomeSiteMenu = () => {
             <IconButton className={classes.navBarIconButton} color="inherit">Support</IconButton>
             <IconButton className={classes.navBarIconButton} color="inherit">SUBSCRIBE</IconButton>
           </div>
-
         </Toolbar>
       </AppBar>
     </Paper>
+    <Grid container spacing={3}>
+      <Grid item xs={6}>
+          <About />
+      </Grid>
+      <Grid item xs={6}>
+        <SimpleMap />
+      </Grid>
+    </Grid>
+    </>
   )
 }
 
