@@ -57,9 +57,12 @@ const useStyles = makeStyles(theme => ({
       marginLeft: "auto"
   },
   logoImage: {
-      height: "200px;",
-      width: "200px;"
+      height: "100px;",
+      width: "100px;"
   },
+  navBarIconButton: {
+    color: "white",
+  }
 }))
 
 const NewHomeSiteMenu = () => {
@@ -74,9 +77,8 @@ const NewHomeSiteMenu = () => {
 
   return (
     <Paper elevation={0} square>
-      <AppBar position="static" color="inherit">
+      <AppBar position="static" color="inherit" className={classes.appBar}>
         <Toolbar>
-          
           
           <CardMedia
             component="img"
@@ -85,7 +87,6 @@ const NewHomeSiteMenu = () => {
             image={OrcasoundLogo}
           />
      
-
           <Typography component="h1" variant="h1">
             <Link
               component={RouterLink}
@@ -96,18 +97,18 @@ const NewHomeSiteMenu = () => {
               className={classes.link}
             >
               <Box ml={1} pt={3}>
-                Orcasound
+                <h1>Orcasound</h1>
               </Box>
             </Link>
           </Typography>
           <div className={classes.rightToolBar}>
-            <IconButton color="inherit">Listen</IconButton>
-            <IconButton color="inherit">Learn</IconButton>
-            <IconButton color="inherit">Projects</IconButton>
-            <IconButton color="inherit">Blogs</IconButton>
-            <IconButton color="inherit">About</IconButton>
-            <IconButton color="inherit">Support</IconButton>
-            <IconButton color="inherit">SUBSCRIBE</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">Listen</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">Learn</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">Projects</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">Blogs</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">About</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">Support</IconButton>
+            <IconButton className={classes.navBarIconButton} color="inherit">SUBSCRIBE</IconButton>
           </div>
 
         </Toolbar>
