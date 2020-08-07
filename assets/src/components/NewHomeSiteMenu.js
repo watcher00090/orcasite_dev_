@@ -7,6 +7,7 @@ import SimpleMap from "./SimpleMap.js"
 
 import About from "./About.js"
 
+
 import {
   Paper,
   AppBar,
@@ -27,6 +28,7 @@ import {
 import NotificationIcon from "@material-ui/icons/Notifications"
 
 import OrcasoundLogo from "../../static/orcasound-logo.png"
+import OrcaImage from  "../../static/spyhops_ship.jpg"
 
 import { sizing } from '@material-ui/system'
 
@@ -127,9 +129,16 @@ const NewHomeSiteMenu = () => {
         </Toolbar>
       </AppBar>
     </Paper>
-    <Grid container spacing={3}>
+    <Grid container spacing={1}>
       <Grid item xs={6}>
           <About />
+           
+          <CardMedia
+            component="img"
+            alt="Orca Image"
+            image={OrcaImage}
+          />
+          
       </Grid>
       <Grid item xs={6}>
         <SimpleMap />
