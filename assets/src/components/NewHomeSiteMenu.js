@@ -7,6 +7,8 @@ import SimpleMap from "./SimpleMap.js"
 
 import About from "./About.js"
 
+import ListenPageRoot from "./ListenPageRoot.js"
+
 
 import {
   Paper,
@@ -98,7 +100,7 @@ const NewHomeSiteMenu = () => {
     <>
     <Paper elevation={0} square>
       <AppBar position="static" color="inherit" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar variant="dense">
           <Box flexGrow={1}>
 
           <Box display="flex" flexDirection="column" justifyContent="center">
@@ -136,7 +138,13 @@ const NewHomeSiteMenu = () => {
 
           <Box display="flex" flexDirection="column" justifyContent="center">
             <div className={classes.rightToolBar}>
-              <IconButton className={classes.navBarIconButton} color="inherit">Listen</IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link
+                  href={"/listenpage"}
+                  >
+                  Listen
+                </Link>
+              </IconButton>
               <IconButton className={classes.navBarIconButton} color="inherit">Learn</IconButton>
               <IconButton className={classes.navBarIconButton} color="inherit">Projects</IconButton>
               <IconButton className={classes.navBarIconButton} color="inherit">Blogs</IconButton>

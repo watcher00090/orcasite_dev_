@@ -11,6 +11,7 @@ import DynamicFeed from "./DynamicFeed"
 import Login from "./Login"
 import NewHome from "./NewHome"
 import GQLExperiment from "./GQLExperiment"
+import ListenPageRoot from "./ListenPageRoot.js"
 
 const Root = props => {
   return (
@@ -30,16 +31,18 @@ const Root = props => {
 
         <Route exact path="/newhome" component={NewHome} />  
         <Route exact path="/experimentgql" component={GQLExperiment} />  
-
-
         
         <Route path="/dynamic/:feedSlug" component={DynamicFeed} />
 
         <AdminRoute path="/admin" component={Admin} />
 
-        <Route path="/:feedSlug" component={Home} />
+        <Route path="/listenpage" component={ListenPageRoot}/>
+
+        <Route path="/:feedslug" component={DynamicFeed} />
+
       </Switch>
-    </BrowserRouter>  )
+    </BrowserRouter>  
+    )
 }
 
 export default hot(Root)
