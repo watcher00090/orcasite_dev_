@@ -139,18 +139,40 @@ const NewHomeSiteMenu = () => {
           <Box display="flex" flexDirection="column" justifyContent="center">
             <div className={classes.rightToolBar}>
               <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link
-                  href={"/listenpage"}
-                  >
+                <Link href={"/listen"}>
                   Listen
                 </Link>
               </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">Learn</IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">Projects</IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">Blogs</IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">About</IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">Support</IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">SUBSCRIBE</IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href={"/learn"}>
+                  Learn
+                  </Link>
+                </IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href={"/projects"}>
+                  Projects
+                </Link>
+              </IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href={"/blogs"}>
+                  Blogs
+                </Link>
+              </IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href="/about">
+                  About
+                </Link>
+              </IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href={"/support"}>
+                  Support
+                </Link>
+              </IconButton>
+              <IconButton className={classes.navBarIconButton} color="inherit">
+                <Link href={"/subscribe"}>
+                  SUBSCRIBE
+                </Link>
+              </IconButton>
             </div>
         </Box>
 

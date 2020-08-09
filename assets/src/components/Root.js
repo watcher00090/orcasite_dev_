@@ -11,7 +11,14 @@ import DynamicFeed from "./DynamicFeed"
 import Login from "./Login"
 import NewHome from "./NewHome"
 import GQLExperiment from "./GQLExperiment"
+
 import ListenPageRoot from "./ListenPageRoot.js"
+import LearnPageRoot from "./LearnPageRoot.js"
+import ProjectsPageRoot from "./ProjectsPageRoot.js"
+import AboutPageRoot from "./AboutPageRoot.js"
+import BlogsPageRoot from "./BlogsPageRoot.js"
+import SupportPageRoot from "./SupportPageRoot.js"
+import SubscribePageRoot from "./SubscribePageRoot.js"
 
 const Root = props => {
   return (
@@ -36,7 +43,14 @@ const Root = props => {
 
         <AdminRoute path="/admin" component={Admin} />
 
-        <Route path="/listenpage" component={ListenPageRoot}/>
+        <Route path="/listen" component={ListenPageRoot}/>
+        <Route path="/learn" component={LearnPageRoot}/>
+        <Route path="/projects" component={ProjectsPageRoot}/>
+        <Route path="/blogs" component={BlogsPageRoot}/>
+        <Route path="/about" component={AboutPageRoot}/>
+        <Route path="/support" component={SupportPageRoot}/>
+        <Route path="/subscribe" component={SubscribePageRoot}/>
+
 
         <Route path="/:feedslug" component={DynamicFeed} />
 
