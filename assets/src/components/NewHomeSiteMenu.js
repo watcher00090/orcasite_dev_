@@ -33,6 +33,8 @@ import NotificationIcon from "@material-ui/icons/Notifications"
 import OrcasoundLogo from "../../static/orcasound-logo.png"
 import OrcaImage from  "../../static/spyhops_ship_updated.jpg"
 
+import FormDialog from "./FormDialog.js"
+
 import { sizing } from '@material-ui/system'
 
 
@@ -67,14 +69,21 @@ const useStyles = makeStyles(theme => ({
       marginLeft: "auto"
   },
   logoImage: {
-      height: "100px;",
-      width: "100px;"
+      height: "200px;",
+      width: "200px;"
   },
   navBarIconButton: {
     color: "white",
+    gutterTop: "20px",
+    gutterBottom: "20px",
+    disableGutters: false,
   },
   frontPageOrcaImageBox: {
     height: '25%'
+  },
+  navBarLink: {
+    color: "white",
+    textTransform: "none",
   }
 }))
 
@@ -129,50 +138,43 @@ const NewHomeSiteMenu = () => {
                   </Link>
                 </Typography>
               </Box>
-
             </Box>
           </Box>
-
-
           </Box>
 
           <Box display="flex" flexDirection="column" justifyContent="center">
             <div className={classes.rightToolBar}>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/listen"}>
+              <Button color="inherit" >             
+                <Link href={"/listen"} className={classes.navBarLink}>
                   Listen
                 </Link>
-              </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/learn"}>
+              </Button>
+              <Button className={classes.navBarIconButton} color="inherit">
+                <Link href={"/learn"} className={classes.navBarLink}>
                   Learn
                   </Link>
-                </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/projects"}>
+              </Button>
+              <Button className={classes.navBarIconButton} color="inherit">
+                <Link href={"/projects"} className={classes.navBarLink}>
                   Projects
                 </Link>
-              </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/blogs"}>
-                  Blogs
+              </Button>
+              <Button className={classes.navBarIconButton} color="inherit">
+                <Link className={classes.navBarLink}>
+                    Blogs
                 </Link>
-              </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href="/about">
+              </Button>
+              <Button className={classes.navBarIconButton} color="inherit" >
+                <Link href="/about" className={classes.navBarLink}>
                   About
                 </Link>
-              </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/support"}>
+              </Button>
+              <Button className={classes.navBarIconButton} color="inherit">
+                <Link href={"/support"} className={classes.navBarLink}>
                   Support
                 </Link>
-              </IconButton>
-              <IconButton className={classes.navBarIconButton} color="inherit">
-                <Link href={"/subscribe"}>
-                  SUBSCRIBE
-                </Link>
-              </IconButton>
+              </Button>
+              <FormDialog className={classes.navBarIconButton}/>
             </div>
         </Box>
 
